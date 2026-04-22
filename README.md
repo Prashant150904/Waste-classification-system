@@ -114,47 +114,28 @@ User enters Flask receives ML Model Result shown waste details → the data → 
 
 WasteClassification_FYP/ │ ├── waste_classification.py # Main ML script ├── app.py # Flask Web App ├── save_model.py # Save trained model ├── templates/ │ └── index.html # Frontend UI ├── outputs/ # All 8 graphs ├── model/ # Saved ML models ├── requirements.txt # Python libraries ├── .gitignore # Git ignore file └── README.md # Project documentation
 
-
----
-
-## 🚀 How to Run
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/Kitz2004/WasteClassification-FYP.git
+🚀 How to Run1. Clone RepositoryBashgit clone https://github.com/Kitz2004/WasteClassification-FYP.git
 cd WasteClassification-FYP
-2. Create Virtual Environment
-python -m venv .venv
-.venv\Scripts\activate
-3. Install Requirements
-pip install -r requirements.txt
-4. Train and Save Model
-python waste_classification.py
-python save_model.py
-5. Run Web App
-python app.py
-6. Open Browser
-http://127.0.0.1:5000
-📊 Final Results
-Model	Accuracy	Precision	Recall	F1-Score
-Decision Tree	89.5%	0.90	0.90	0.89
-Random Forest ⭐	92.5%	0.93	0.92	0.92
-Logistic Regression	92.1%	0.92	0.92	0.92
-✅ Project Achievements
-✅ Trained 3 ML models
-✅ Achieved 92.5% accuracy
-✅ Generated 8 analytical graphs
-✅ Built working web application
-✅ Uploaded to GitHub
-✅ Follows complete ML pipeline:
-Data Generation → Preprocessing → Training → Evaluation → Deployment
-📝 Project Summary
-We built an AI-based waste classification system as our Final Year Project. The system uses Machine Learning to classify waste into Organic and Recyclable categories. We trained 3 different ML models on 2,527 waste samples and found that Random Forest gave the best accuracy of 92.5%. We also built a web application using Flask where users can enter waste properties and get instant classification results. The project is deployed locally and uploaded to GitHub.
 
-👨‍💻 Developer
-Field	Detail
-Name	Panchasara Prashant
-ID	22BECEG034
-Email	panchasaraprashant4@gmail.com
-College	SVIT Vasad
-Department	Computer Engineering
+2. Create Virtual EnvironmentBashpython -m venv .venv
+.venv\Scripts\activate
+3. Install RequirementsBashpip install -r requirements.txt
+4. Train and Save ModelBashpython waste_classification.py
+python save_model.py
+5. Run Web AppBashpython app.py
+6. Open BrowserPlaintexthttp://127.0.0.1:5000
+   
+📊 Final ResultsModelAccuracyPrecisionRecallF1-ScoreDecision Tree89.5%0.900.900.89Random Forest ⭐92.5%0.930.920.92Logistic Regression92.1%0.920.920.92✅ Project Achievements✅ Trained 3 ML models✅ Achieved 92.5% accuracy✅ Generated 8 analytical graphs✅ Built working web application✅ Uploaded to GitHub✅ Follows complete ML pipeline: Data Generation → Preprocessing → Training → Evaluation → Deployment📝 Project SummaryWe built an AI-based waste classification system as our Final Year Project. The system uses Machine Learning to classify waste into Organic and Recyclable categories. We trained 3 different ML models on 2,527 waste samples and found that Random Forest gave the best accuracy of 92.5%. We also built a web application using Flask where users can enter waste properties and get instant classification results. The project is deployed locally and uploaded to GitHub.
+
+## 👨‍💻 Developer Information
+
+| Field | Detail |
+| :--- | :--- |
+| **Name** | Panchasara Prashant |
+| **ID** | 22BECEG034 |
+| **Email** | [panchasaraprashant4@gmail.com] |
+| **College** | SVIT Vasad |
+| **Department** | Computer Engineering |
+
+
+
