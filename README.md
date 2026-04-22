@@ -119,11 +119,9 @@ WasteClassification_FYP/ │ ├── waste_classification.py # Main ML script 
 
 ## 🚀 How to Run
 
-### 1. Clone Repository
-```bash
+1.Clone Repository
 git clone https://github.com/Kitz2004/WasteClassification-FYP.git
 cd WasteClassification-FYP
-
 2. Create Virtual Environment
 python -m venv .venv
 .venv\Scripts\activate
@@ -143,7 +141,7 @@ Decision Tree	89.5%	0.90	0.90	0.89
 Random Forest ⭐	92.5%	0.93	0.92	0.92
 Logistic Regression	92.1%	0.92	0.92	0.92
 
-✅ Project Achievements
+     Project Achievements
 ✅ Trained 3 ML models
 ✅ Achieved 92.5% accuracy
 ✅ Generated 8 analytical graphs
@@ -151,7 +149,6 @@ Logistic Regression	92.1%	0.92	0.92	0.92
 ✅ Uploaded to GitHub
 ✅ Follows complete ML pipeline:
 Data Generation → Preprocessing → Training → Evaluation → Deployment
-
 
 📝 Project Summary
 We built an AI-based waste classification system as our Final Year Project. The system uses Machine Learning to classify waste into Organic and Recyclable categories. We trained 3 different ML models on 2,527 waste samples and found that Random Forest gave the best accuracy of 92.5%. We also built a web application using Flask where users can enter waste properties and get instant classification results. The project is deployed locally and uploaded to GitHub.
