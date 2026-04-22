@@ -1,5 +1,5 @@
 # 🗑️ AI-Based Waste Classification System
-### Final Year Project | SVIT Vasad | Information Technology
+### Final Year Project | SVIT Vasad | Computer Engineering
 
 ---
 
