@@ -1,8 +1,4 @@
-Here is a clean, brief, and professional `README.md` tailored specifically to the code files you provided. It is perfectly formatted for your GitHub repository.
 
-***
-
-```markdown
 # 🗑️ AI-Based Waste Classification System
 ### Final Year Project | SVIT Vasad | Computer Engineering
 
@@ -32,8 +28,7 @@ An AI-powered web application that classifies waste into **Organic** or **Recycl
 ### 1. Setup Environment
 Clone the repository and install the required dependencies.
 ```bash
-git clone [https://github.com/YourUsername/WasteClassification-FYP.git](https://github.com/YourUsername/WasteClassification-FYP.git)
-cd WasteClassification-FYP
+git clone :https://github.com/Prashant150904/Waste-classification-system.git
 
 # Create and activate virtual environment
 python -m venv .venv
@@ -78,6 +73,47 @@ WasteClassification-FYP/
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
 ```
+
+---
+
+## 💾 Project Files
+
+| File | Purpose |
+|---|---|
+| `waste_classification.py` | Trains all 3 ML models and saves graphs |
+| `save_model.py` | Saves trained model to disk |
+| `app.py` | Runs the Flask website |
+| `templates/index.html` | The webpage (HTML + CSS + JS) |
+| `requirements.txt` | List of Python libraries needed |
+| `outputs/` | All 8 graphs saved here |
+| `model/` | Saved ML model files |
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Main programming language |
+| scikit-learn | Machine learning library |
+| pandas | Data handling |
+| numpy | Mathematical calculations |
+| matplotlib & seaborn | Graph generation |
+| Flask | Web application framework |
+| HTML/CSS/JS | Frontend website |
+| GitHub | Code storage and sharing |
+
+---
+
+📊 Final Results
+Model	Accuracy	Precision	Recall	F1-Score
+Decision Tree	89.5%	0.90	0.90	0.89
+Random Forest ⭐	92.5%	0.93	0.92	0.92
+Logistic Regression	92.1%	0.92	0.92	0.92
+
+
+Project Summary
+We built an AI-based waste classification system as our Final Year Project. The system uses Machine Learning to classify waste into Organic and Recyclable categories. We trained 3 different ML models on 2,527 waste samples and found that Random Forest gave the best accuracy of 92.5%. We also built a web application using Flask where users can enter waste properties and get instant classification results. The project is deployed locally and uploaded to GitHub.
 
 ---
 
