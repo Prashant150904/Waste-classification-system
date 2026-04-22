@@ -1,166 +1,93 @@
+Here is a clean, brief, and professional `README.md` tailored specifically to the code files you provided. It is perfectly formatted for your GitHub repository.
+
+***
+
+```markdown
 # 🗑️ AI-Based Waste Classification System
 ### Final Year Project | SVIT Vasad | Computer Engineering
 
----
-
-## 📌 What is This Project?
-
-An AI-powered waste classification system that classifies waste into:
-- 🌿 **Organic** — Food waste, leaves, wood
-- ♻️ **Recyclable** — Plastic, metal, paper
-
-It takes waste properties as input and predicts which bin to use.
+An AI-powered web application that classifies waste into **Organic** or **Recyclable** categories based on its physical properties. Built with Python, scikit-learn, and Flask.
 
 ---
 
-## 📊 Dataset
-
-- **Total Samples** : 2,527
-- **Features**      : 6
-- **Classes**       : 2 (Organic, Recyclable)
-
-| Feature | What it means |
-|---|---|
-| Material Type | What the waste is made of |
-| Weight (kg) | How heavy it is |
-| Size (cm) | How big it is |
-| Is Contaminated | Is it mixed with food/liquid |
-| Moisture Level | How wet it is |
-| Decompose Days | How many days to decompose |
+## ✨ Key Features
+* **Machine Learning Pipeline:** Trains and evaluates 3 models (Decision Tree, Random Forest, Logistic Regression).
+* **High Accuracy:** Uses a tuned **Random Forest** model achieving ~92.5% classification accuracy.
+* **Feature Analysis:** Evaluates waste based on 6 attributes (Material Type, Weight, Size, Contamination, Moisture, Decomposition Days).
+* **Interactive UI:** A modern, responsive Flask web dashboard for real-time predictions and confidence scoring.
+* **Automated Analytics:** Generates 8 detailed EDA and performance graphs (ROC curves, Feature Importance, Confusion Matrices).
 
 ---
 
-## 🤖 Machine Learning Models
-
-We trained 3 different AI models and compared them:
-
-| Model | How it works | Accuracy |
-|---|---|---|
-| Decision Tree | Like a flowchart — asks yes/no questions | 89.5% |
-| **Random Forest** ⭐ | 100 decision trees voting together | **92.5%** |
-| Logistic Regression | Uses math formula to find probability | 92.1% |
-
-**Random Forest was selected as the best model with 92.5% accuracy**
+## 🛠️ Tech Stack
+* **Machine Learning:** `scikit-learn`, `pandas`, `numpy`
+* **Visualization:** `matplotlib`, `seaborn`
+* **Web Framework:** `Flask`
+* **Frontend:** HTML5, CSS3, JavaScript
 
 ---
 
-## 📈 Graphs Generated
+## 🚀 Quick Start Guide
 
-| Graph | What it shows |
-|---|---|
-| Class Distribution | How many organic vs recyclable samples |
-| Model Comparison | Which model performed best |
-| Confusion Matrix | How many correct/wrong predictions |
-| Feature Importance | Which property matters most for prediction |
-| ROC Curve | How well model separates two classes |
-| Feature Distributions | How each property differs between classes |
-| Correlation Heatmap | How properties relate to each other |
-| Results Table | Final accuracy summary of all models |
+### 1. Setup Environment
+Clone the repository and install the required dependencies.
+```bash
+git clone [https://github.com/YourUsername/WasteClassification-FYP.git](https://github.com/YourUsername/WasteClassification-FYP.git)
+cd WasteClassification-FYP
 
----
+# Create and activate virtual environment
+python -m venv .venv
+.venv\Scripts\activate      # On Windows
+# source .venv/bin/activate # On Mac/Linux
 
-## 🌐 Flask Web Application
+# Install packages
+pip install -r requirements.txt
+```
 
-We built a website where anyone can:
-- Enter waste details
-- Click Classify Waste
-- Get instant prediction
+### 2. Train the Model & Generate Graphs
+Run the main ML script to generate the dataset, train the models, and output the analysis graphs to the `outputs/` folder.
+```bash
+python waste_classification.py
+```
 
-| Technology | Purpose |
-|---|---|
-| HTML | Structure of the webpage (like skeleton) |
-| CSS | Design/styling of webpage (like clothes) |
-| JavaScript | Makes webpage interactive (like brain) |
-| Flask | Python connects ML model to website (like bridge) |
+### 3. Save the Production Model
+Serialize the trained Random Forest model and encoders to the `model/` directory for the web app to use.
+```bash
+python save_model.py
+```
 
----
-
-## 🔄 How the System Works
-User enters Flask receives ML Model Result shown waste details → the data → predicts → on screen (on website) (in Python) (Random Forest) (Organic/Recyclable)
-
-
----
-
-## 💾 Project Files
-
-| File | Purpose |
-|---|---|
-| `waste_classification.py` | Trains all 3 ML models and saves graphs |
-| `save_model.py` | Saves trained model to disk |
-| `app.py` | Runs the Flask website |
-| `templates/index.html` | The webpage (HTML + CSS + JS) |
-| `requirements.txt` | List of Python libraries needed |
-| `outputs/` | All 8 graphs saved here |
-| `model/` | Saved ML model files |
-
----
-
-## 🛠️ Technologies Used
-
-| Technology | Purpose |
-|---|---|
-| Python | Main programming language |
-| scikit-learn | Machine learning library |
-| pandas | Data handling |
-| numpy | Mathematical calculations |
-| matplotlib & seaborn | Graph generation |
-| Flask | Web application framework |
-| HTML/CSS/JS | Frontend website |
-| GitHub | Code storage and sharing |
+### 4. Launch the Web Application
+Start the Flask server and interact with the AI model in your browser.
+```bash
+python app.py
+```
+Open **`http://127.0.0.1:5000`** in your web browser.
 
 ---
 
 ## 📁 Project Structure
-
-WasteClassification_FYP/ │ ├── waste_classification.py # Main ML script ├── app.py # Flask Web App ├── save_model.py # Save trained model ├── templates/ │ └── index.html # Frontend UI ├── outputs/ # All 8 graphs ├── model/ # Saved ML models ├── requirements.txt # Python libraries ├── .gitignore # Git ignore file └── README.md # Project documentation
-
+```text
+WasteClassification-FYP/
+├── app.py                    # Flask Web Application
+├── waste_classification.py   # Main ML training & visualization script
+├── save_model.py             # Script to export the .pkl model files
+├── templates/
+│   └── index.html            # Web Dashboard UI
+├── outputs/                  # Generated analytical graphs
+├── model/                    # Saved ML models and scalers
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
+```
 
 ---
 
-## 🚀 How to Run
-
-1.Clone Repository
-git clone https://github.com/Kitz2004/WasteClassification-FYP.git
-cd WasteClassification-FYP
-2. Create Virtual Environment
-python -m venv .venv
-.venv\Scripts\activate
-3. Install Requirements
-pip install -r requirements.txt
-4. Train and Save Model
-python waste_classification.py
-python save_model.py
-5. Run Web App
-python app.py
-6. Open Browser
-http://127.0.0.1:5000
-
-📊 Final Results
-Model	Accuracy	Precision	Recall	F1-Score
-Decision Tree	89.5%	0.90	0.90	0.89
-Random Forest ⭐	92.5%	0.93	0.92	0.92
-Logistic Regression	92.1%	0.92	0.92	0.92
-
-     Project Achievements
-✅ Trained 3 ML models
-✅ Achieved 92.5% accuracy
-✅ Generated 8 analytical graphs
-✅ Built working web application
-✅ Uploaded to GitHub
-✅ Follows complete ML pipeline:
-Data Generation → Preprocessing → Training → Evaluation → Deployment
-
-📝 Project Summary
-We built an AI-based waste classification system as our Final Year Project. The system uses Machine Learning to classify waste into Organic and Recyclable categories. We trained 3 different ML models on 2,527 waste samples and found that Random Forest gave the best accuracy of 92.5%. We also built a web application using Flask where users can enter waste properties and get instant classification results. The project is deployed locally and uploaded to GitHub.
-
-
-
-## 👨‍💻 Developer Information
+## 👨‍💻 Developer
 
 | Field | Detail |
 | :--- | :--- |
 | **Name** | Panchasara Prashant |
 | **ID** | 22BECEG034 |
-| **Email** | [panchasaraprashant4@gmail.com] |
+| **Email** | [panchasaraprashant4@gmail.com](mailto:panchasaraprashant4@gmail.com) |
 | **College** | SVIT Vasad |
 | **Department** | Computer Engineering |
+```
